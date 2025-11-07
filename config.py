@@ -1,0 +1,1 @@
+API_BASE_URL = 'http://reg-api-test.keydisk.ru/'
