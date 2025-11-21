@@ -1,0 +1,66 @@
+{
+  "sectionName": "КЭП УЦ ФНС",
+  "limits": [],
+  "tariffs": [
+    {
+      "id": "9a4e88ff-3b1d-44a7-9191-2b6a32257905",
+      "tariffId": "59ae9934-41a6-491b-a8a8-7b4b305452b9",
+      "tariffName": "Бизнес",
+      "tariffType": "Основная лицензия",
+      "price": 1000.0,
+      "display": true,
+      "limits": [],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "Федеральная налоговая служба",
+              "isDefault": true,
+              "isFns": true,
+              "isRoseltorg": false,
+              "caTemplates": []
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "validity": 1,
+          "validityUnitId": 3
+        }
+      ],
+      "article": "УТ-00003052"
+    },
+    {
+      "id": "170ffe13-62cc-4dec-a094-5334ff8ffc19",
+      "tariffId": "66a1e4f4-1c93-4316-af4c-fe456f9375e2",
+      "tariffName": "Продление",
+      "tariffType": "Расширение лицензии",
+      "price": 1000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+          "name": "Только для ЮЛ или ИП"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [],
+      "article": null
+    }
+  ],
+  "sections": []
+}

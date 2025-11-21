@@ -1,3 +1,4 @@
+# tests/fixtures/sections.py
 import pytest
 from test_logic.tariff_json import find_section_by_name
 

@@ -1,0 +1,688 @@
+{
+  "sectionName": "Госзаказ",
+  "limits": null,
+  "tariffs": [
+    {
+      "id": "a3b59d59-6adb-41bb-8040-4b30b30662a6",
+      "tariffId": "8f5543c5-c913-4464-a717-aecd84b1cae6",
+      "tariffName": "Администратор организации",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение сертификата полномочия (данное расширение уже включено в стоимость тарифа",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+          "name": "Используется по умолчанию"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.3.1.4.1",
+          "limits": [
+            {
+              "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+              "name": "Используется по умолчанию"
+            }
+          ]
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "b107c7ae-533f-4c50-91a8-a298c1c4cfa0",
+          "attributeName": "Администратор организации"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "488aadc4-92b3-4edc-95d7-06ca64fcbf33",
+      "tariffId": "b109b3b4-28ee-4ebc-9bf6-cbc60c3fc932",
+      "tariffName": "Уполномоченный специалист",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение сертификата полномочия (данное расширение уже включено в стоимость тарифа",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+          "name": "Используется по умолчанию"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.3.1.4.2",
+          "limits": [
+            {
+              "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+              "name": "Используется по умолчанию"
+            }
+          ]
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "20de0b3d-607d-48b9-88aa-619e766ced31",
+          "attributeName": "Уполномоченный специалист"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "497d44e9-2cd9-420c-bbc1-1b52992d074d",
+      "tariffId": "99dbc1f9-b867-492b-bc55-947d65eb7a98",
+      "tariffName": "Специалист с правом подписи контракта",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение сертификата полномочия (данное расширение уже включено в стоимость тарифа",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+          "name": "Используется по умолчанию"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.3.1.4.3",
+          "limits": [
+            {
+              "id": "b5f75315-6f08-4e5e-94ee-a4ecbd4dd4a7",
+              "name": "Используется по умолчанию"
+            }
+          ]
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "323f2340-6a84-4c99-a122-c0eb44b29164",
+          "attributeName": "Специалист с правом подписи контракта"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "58ccb122-2c1c-4536-8087-c19dae7f9d96",
+      "tariffId": "a7b7a2a6-c3e0-4f49-a746-5ca8e322311e",
+      "tariffName": "Расширение \"Системы раскрытия информации\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на порталах пяти уполномоченных агентств: Интерфакс, СКРИН, АЗИПИ, AK&M, ПРАЙМ",
+      "price": 500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.44.1.1.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.45.1.1.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.42.5.5.5",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.41.1.1.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.40.1",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "b23e05e4-4329-43e9-b40b-5ddb6114cfa0",
+          "attributeName": "АЗИПИ",
+          "number": 1
+        },
+        {
+          "attributeGuid": "a2d60c7f-5dc4-4c5c-8789-cf298ddf6570",
+          "attributeName": "AK&M",
+          "number": 1
+        },
+        {
+          "attributeGuid": "d6363a82-273d-4214-aa84-7355e35d682b",
+          "attributeName": "ПРАЙМ",
+          "number": 1
+        },
+        {
+          "attributeGuid": "8628474e-1928-4373-b74b-f03a3a5b53a4",
+          "attributeName": "Интерфакс",
+          "number": 1
+        },
+        {
+          "attributeGuid": "63913cc7-db23-4ecf-a4d3-f7542ac7097d",
+          "attributeName": "СКРИН",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "3a4f9e79-2ca1-4759-8e43-7ba5b1e4140f",
+      "tariffId": "294bd643-7829-491e-8caf-2b34e5a588e9",
+      "tariffName": "Расширение \"Системы раскрытия информации\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на порталах пяти уполномоченных агентств: Интерфакс, СКРИН, АЗИПИ, AK&M, ПРАЙМ",
+      "price": 500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.40.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.41.1.1.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.42.5.5.5",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.45.1.1.1",
+          "limits": []
+        },
+        {
+          "value": "1.2.643.6.44.1.1.1",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "63913cc7-db23-4ecf-a4d3-f7542ac7097d",
+          "attributeName": "СКРИН",
+          "number": 1
+        },
+        {
+          "attributeGuid": "8628474e-1928-4373-b74b-f03a3a5b53a4",
+          "attributeName": "Интерфакс",
+          "number": 1
+        },
+        {
+          "attributeGuid": "d6363a82-273d-4214-aa84-7355e35d682b",
+          "attributeName": "ПРАЙМ",
+          "number": 1
+        },
+        {
+          "attributeGuid": "a2d60c7f-5dc4-4c5c-8789-cf298ddf6570",
+          "attributeName": "AK&M",
+          "number": 1
+        },
+        {
+          "attributeGuid": "b23e05e4-4329-43e9-b40b-5ddb6114cfa0",
+          "attributeName": "АЗИПИ",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "e07ffd53-6d7a-4f77-884e-1028188d3500",
+      "tariffId": "f463b7f4-5f1b-43c1-b1c2-9c0032c4f64a",
+      "tariffName": "Расширение ЭТП \"Электронные системы Поволжья\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Электронные системы Поволжья\"",
+      "price": 1400.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.51",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "d2185ad3-a450-4686-869e-14d14f909a4f",
+          "attributeName": "Электронные системы Поволжья"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "03e001cc-2dcd-42cc-836a-4c62c8232f66",
+      "tariffId": "8fc18bbd-f3df-4d5a-addd-19585323b737",
+      "tariffName": "Расширение ЭТП \"Электронные системы Поволжья\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Электронные системы Поволжья\"",
+      "price": 1400.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.51",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "d2185ad3-a450-4686-869e-14d14f909a4f",
+          "attributeName": "Электронные системы Поволжья"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "62355449-a5f9-43ae-8ce0-44dfd45d1114",
+      "tariffId": "3a92d6b4-9e33-4927-b9dc-6cf3f011f508",
+      "tariffName": "Расширение ЭТП \"Аукционный тендерный центр\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Аукционный тендерный центр\"",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.48",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "27ca78d4-304a-478d-a88e-3c481c58fbea",
+          "attributeName": "Аукционный тендерный центр"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "7772a5e9-84e3-46ec-84d2-de35f754a04d",
+      "tariffId": "f9caca61-aa62-4c9c-b9bb-cd41d77f6755",
+      "tariffName": "Расширение ЭТП \"Аукционный тендерный центр\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Аукционный тендерный центр\"",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.48",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "27ca78d4-304a-478d-a88e-3c481c58fbea",
+          "attributeName": "Аукционный тендерный центр"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "1270963e-8241-48a6-a9b8-3b6fd7af0f81",
+      "tariffId": "ea904826-0a0f-4ba6-baec-6ba6eb7ac7f5",
+      "tariffName": "Расширение \"B2B-CENTER\"",
+      "tariffType": "Расширение лицензии",
+      "price": 2500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "956081f6-2f91-44dd-b6df-6a99b4372194",
+      "tariffId": "da92589f-d8a1-45a5-b3dc-e27c48a9cd0d",
+      "tariffName": "Расширение \"B2B-CENTER\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "price": 2500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "57fada24-6883-481f-bf96-dc7e31f9dc13",
+      "tariffId": "266dcf37-d2c0-496e-84bc-bee525068699",
+      "tariffName": "Расширение ЭТП \"Региональная торговая площадка\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Региональная торговая площадка\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.53",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "523086be-22c9-4253-b590-8bca3acee002",
+          "attributeName": "Региональная торговая площадка"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "f78bcdcf-7f31-4c7e-bdbd-72e019382b13",
+      "tariffId": "643c3b62-3a51-4388-8715-e83dfbdbfff7",
+      "tariffName": "Расширение ЭТП \"Фабрикант\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Фабрикант\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "8a104fd6-8bd1-401c-88c6-18a8d42e516a",
+          "attributeName": "Фабрикант"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "15e8846c-71fe-45df-8dc7-ed6dad6f0093",
+      "tariffId": "5bed000a-27ba-4580-b84e-b0264805c050",
+      "tariffName": "Расширение ЭТП \"Региональная торговая площадка\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Региональная торговая площадка\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.53",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "523086be-22c9-4253-b590-8bca3acee002",
+          "attributeName": "Региональная торговая площадка"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "65c5a182-21a3-4b46-912f-6b120895253f",
+      "tariffId": "554c18e6-7a00-4286-a146-7edd2ddf0dda",
+      "tariffName": "Расширение ЭТП \"Фабрикант\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Фабрикант\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "8a104fd6-8bd1-401c-88c6-18a8d42e516a",
+          "attributeName": "Фабрикант"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "f0876ab3-2009-41af-a5c8-74dc0d369a7d",
+      "tariffId": "45f53764-3ae6-477c-8cff-58ef5809515b",
+      "tariffName": "Расширение ЭТП \"Центр дистанционных торгов\" (участник)",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Центр дистанционных торгов\" участником торгов (покупателем)",
+      "price": 4500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.18.2",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "a29fb97d-5f2e-4e68-9d3c-adb6aa0d93f7",
+          "attributeName": "Центр дистанционных торгов (участник)"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "69979082-3f6e-4508-8063-805a719af26b",
+      "tariffId": "5a59963c-f1d5-4b07-b035-fd782e9a7080",
+      "tariffName": "Расширение ЭТП \"Центр дистанционных торгов\" (участник) КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Центр дистанционных торгов\" участником торгов (покупателем)",
+      "price": 4500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.6.18.2",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "a29fb97d-5f2e-4e68-9d3c-adb6aa0d93f7",
+          "attributeName": "Центр дистанционных торгов (участник)"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "e95b3bf1-1fed-42fd-9e33-76c097ab34f6",
+      "tariffId": "52a518a7-ed1d-4d1e-9206-8ad904938fcf",
+      "tariffName": "Расширение \"B2B-CENTER PLUS\"",
+      "tariffType": "Расширение лицензии",
+      "price": 9000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "14684e2e-67ca-4d45-8193-54c0cebac75b",
+      "tariffId": "d5c9af73-ee4f-4bd3-a5ae-0d978145acc2",
+      "tariffName": "Расширение \"B2B-CENTER PLUS\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "price": 9000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

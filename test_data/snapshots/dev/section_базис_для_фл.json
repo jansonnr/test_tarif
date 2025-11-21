@@ -1,0 +1,216 @@
+{
+  "sectionName": "Базис для ФЛ",
+  "limits": [
+    {
+      "id": "dba02e4f-3a97-44d7-8b19-a0dac8e58674",
+      "name": "Физическое лицо"
+    },
+    {
+      "id": "19c6bf21-f5a3-49d5-818f-84944b055e55",
+      "name": "Максимальное число расширений",
+      "value": "3"
+    },
+    {
+      "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+      "name": "Список доступных криптопровайдеров",
+      "value": "[ 9, 11, 17 ]"
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "d2e8319c-0b70-47eb-b177-b35a8263c3f8",
+      "tariffId": "a211b83f-47a2-4553-b42c-8afcde6e16ea",
+      "tariffName": "Базис для ФЛ",
+      "tariffType": "Основная лицензия",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "dba02e4f-3a97-44d7-8b19-a0dac8e58674",
+          "name": "Физическое лицо"
+        },
+        {
+          "id": "19c6bf21-f5a3-49d5-818f-84944b055e55",
+          "name": "Максимальное число расширений",
+          "value": "3"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11, 17 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" 833",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": []
+            },
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": false,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.8461984.13190941.10568297.9743651.18877.43432",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                },
+                {
+                  "type": "Специализированный",
+                  "oid": "1.2.643.2.2.50.1.9.3311484.2853914.11814819.12678195.64412.45518",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": false,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "number": 1,
+          "validity": 1,
+          "validityUnitId": 3
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "ff867c1d-8c43-4403-a019-9495003a9849",
+      "tariffId": "57b8591f-2ef8-4777-88a3-95769b4f54b5",
+      "tariffName": "+3 месяца к сроку действия сертификата",
+      "tariffMarketingName": "+3 месяца к сроку действия сертификата",
+      "tariffType": "Расширение лицензии",
+      "price": 500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11, 17, 18 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": false,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "validity": 15,
+          "validityUnitId": 1
+        }
+      ],
+      "article": "УТ-00004498"
+    },
+    {
+      "id": "ab650b5c-2243-40f1-be76-671a580e8d98",
+      "tariffId": "ebbb47d7-715d-4ddd-adc5-ecad16006c08",
+      "tariffName": "Расширенная лицензия",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение позволяет использовать СКЗИ КриптоПро CSP на любом рабочем месте где установлена программа без приобретения годовой или бессрочной лицензии на всем сроке действия сертификата ЭП",
+      "price": 1000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "b29a556c-227c-4780-8192-ba883416f063",
+          "name": "Лицензия КриптоПро в структуре сертификата"
+        },
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.8461984.13190941.10568297.9743651.18877.43432",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": true,
+                  "isDefault": true
+                },
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "a3cbf1a7-4da5-4e86-8045-fccd6e8dcef2",
+          "attributeName": "Шаблон сертификата"
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

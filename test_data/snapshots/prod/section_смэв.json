@@ -1,0 +1,263 @@
+{
+  "sectionName": "СМЭВ",
+  "limits": null,
+  "tariffs": [],
+  "sections": [
+    {
+      "sectionName": "СМЭВ УЛ",
+      "limits": null,
+      "tariffs": [
+        {
+          "id": "a8c8be54-139c-40cf-b2ec-35f20ab09cd6",
+          "tariffId": "aa77653a-a0fa-4a0e-8564-155ffaa46ce7",
+          "tariffName": "Руководитель органа государственной власти субъекта",
+          "tariffType": "Расширение лицензии",
+          "price": 0.0,
+          "display": true,
+          "limits": [
+            {
+              "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+              "name": "Только для ЮЛ или ИП"
+            }
+          ],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.6",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                },
+                {
+                  "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+                  "name": "Только для ЮЛ или ИП"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "26c231c3-8cbc-48da-9321-9c7a4bd618dd",
+              "attributeName": "Орган государственной власти",
+              "number": 1
+            }
+          ],
+          "article": null
+        },
+        {
+          "id": "5bdc0260-f3e3-4cbe-87aa-6e629c660452",
+          "tariffId": "ff460f59-199b-484e-a1df-352dcce32b53",
+          "tariffName": "Руководитель органа местного самоуправления",
+          "tariffType": "Расширение лицензии",
+          "price": 0.0,
+          "display": true,
+          "limits": [
+            {
+              "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+              "name": "Только для ЮЛ или ИП"
+            }
+          ],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.19",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                },
+                {
+                  "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+                  "name": "Только для ЮЛ или ИП"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "e408b5a1-e89a-4477-b95b-781b730140db",
+              "attributeName": "Орган местного самоуправления",
+              "number": 1
+            }
+          ],
+          "article": null
+        },
+        {
+          "id": "e493b10c-c887-495e-887c-ec545890dd95",
+          "tariffId": "a1286c7e-b842-4a1f-9938-784ccc3d7076",
+          "tariffName": "Руководитель ОМС + Руководитель ОМС по учету имущества",
+          "tariffType": "Расширение лицензии",
+          "note": "Руководитель органа местного самоуправления + Руководитель органа местного самоуправления по учету имущества",
+          "price": 0.0,
+          "display": true,
+          "limits": [],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.5",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                }
+              ]
+            },
+            {
+              "value": "1.2.643.5.1.24.2.19",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "f7b9fc11-c81a-492c-be56-5ce919cee919",
+              "attributeName": "Руководитель (заместитель руководителя) органа местного самоуправления по учету муниципального имущества или иное уполномоченное лицо данного органа"
+            },
+            {
+              "attributeGuid": "e408b5a1-e89a-4477-b95b-781b730140db",
+              "attributeName": "Орган местного самоуправления"
+            }
+          ],
+          "article": null
+        }
+      ],
+      "sections": []
+    },
+    {
+      "sectionName": "СМЭВ УЛ+ИС",
+      "limits": null,
+      "tariffs": [
+        {
+          "id": "40aa3959-49e6-4651-8d50-715efd2e8771",
+          "tariffId": "aa77653a-a0fa-4a0e-8564-155ffaa46ce7",
+          "tariffName": "Руководитель органа государственной власти субъекта ",
+          "tariffType": "Расширение лицензии",
+          "price": 0.0,
+          "display": true,
+          "limits": [
+            {
+              "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+              "name": "Только для ЮЛ или ИП"
+            }
+          ],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.6",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                },
+                {
+                  "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+                  "name": "Только для ЮЛ или ИП"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "26c231c3-8cbc-48da-9321-9c7a4bd618dd",
+              "attributeName": "Орган государственной власти",
+              "number": 1
+            }
+          ],
+          "article": null
+        },
+        {
+          "id": "5a366f98-1253-4cb3-9ff0-35e1c0142223",
+          "tariffId": "ff460f59-199b-484e-a1df-352dcce32b53",
+          "tariffName": "Руководитель органа местного самоуправления",
+          "tariffType": "Расширение лицензии",
+          "price": 0.0,
+          "display": true,
+          "limits": [
+            {
+              "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+              "name": "Только для ЮЛ или ИП"
+            }
+          ],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.19",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                },
+                {
+                  "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+                  "name": "Только для ЮЛ или ИП"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "e408b5a1-e89a-4477-b95b-781b730140db",
+              "attributeName": "Орган местного самоуправления",
+              "number": 1
+            }
+          ],
+          "article": null
+        },
+        {
+          "id": "302decf1-f0fb-43f0-aa4d-cca6c62dc44e",
+          "tariffId": "a1286c7e-b842-4a1f-9938-784ccc3d7076",
+          "tariffName": "Руководитель ОМС + Руководитель ОМС по учету имущества",
+          "tariffType": "Расширение лицензии",
+          "note": "Руководитель органа местного самоуправления + Руководитель органа местного самоуправления по учету имущества",
+          "price": 0.0,
+          "display": true,
+          "limits": [],
+          "templates": [],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.24.2.5",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                }
+              ]
+            },
+            {
+              "value": "1.2.643.5.1.24.2.19",
+              "limits": [
+                {
+                  "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+                  "name": "Юридическое лицо"
+                }
+              ]
+            }
+          ],
+          "additionalDocuments": [],
+          "attributes": [
+            {
+              "attributeGuid": "f7b9fc11-c81a-492c-be56-5ce919cee919",
+              "attributeName": "Руководитель (заместитель руководителя) органа местного самоуправления по учету муниципального имущества или иное уполномоченное лицо данного органа"
+            },
+            {
+              "attributeGuid": "e408b5a1-e89a-4477-b95b-781b730140db",
+              "attributeName": "Орган местного самоуправления"
+            }
+          ],
+          "article": null
+        }
+      ],
+      "sections": []
+    }
+  ]
+}

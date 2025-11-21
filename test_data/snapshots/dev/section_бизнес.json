@@ -1,0 +1,78 @@
+{
+  "sectionName": "Бизнес",
+  "limits": [
+    {
+      "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+      "name": "Только с Крипто Про"
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "fdb17ef8-204b-4132-af45-ab95d480b24b",
+      "tariffId": "59ae9934-41a6-491b-a8a8-7b4b305452b9",
+      "tariffName": "Бизнес",
+      "tariffType": "Основная лицензия",
+      "note": "Тариф позволяет: - Работать на государственных порталах; - Осуществлять юридически значимый защищенный электронный документооборот; - участвовать в торгах по реализации имущества банкротов; - участвовать в торгах на государственных и коммерческих электронных торговых площадках.",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "АО \"Аналитический Центр\"",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": []
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "number": 1,
+          "validity": 1,
+          "validityUnitId": 3
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "3effb88e-cef9-40c0-90b6-9c2aca348466",
+      "tariffId": "66a1e4f4-1c93-4316-af4c-fe456f9375e2",
+      "tariffName": "Продление",
+      "tariffType": "Расширение лицензии",
+      "price": 1000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "059a74d4-8bb2-4b9f-99b5-27ab542b46ce",
+          "name": "Только для ЮЛ или ИП"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [],
+      "article": null
+    }
+  ],
+  "sections": []
+}

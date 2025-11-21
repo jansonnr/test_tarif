@@ -3,7 +3,7 @@ import json
 import sys
 from pathlib import Path
 
-# Добавляем корень проекта в путь для импортов
+# ДОБАВЛЯЕМ КОРЕНЬ ПРОЕКТА В PYTHONPATH
 project_root = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(project_root))
 
@@ -13,18 +13,20 @@ from test_logic.tariff_json import get_all_sections
 
 
 def create_snapshots(env="dev"):
-    """Создает снепшоты в ПРАВИЛЬНОЙ директории"""
+    """Создает снепшоты для указанного окружения"""
+    print(f"🎯 Создание снепшотов для окружения: {env}")
+
     base_url = config.get_base_url(env)
     http_client = wrHttpClient(base_url)
 
-    # ПРАВИЛЬНЫЙ путь для снепшотов
+    # Путь для снепшотов указанного окружения
     snapshots_dir = project_root / "test_data" / "snapshots" / env
     snapshots_dir.mkdir(parents=True, exist_ok=True)
 
-    print(f"🎯 Сохраняем снепшоты в: {snapshots_dir}")
-    print(f"📁 Абсолютный путь: {snapshots_dir.absolute()}")
+    print(f"📁 Директория: {snapshots_dir}")
+    print(f"🌐 API URL: {base_url}")
 
-    print("🔄 Получение данных из API...")
+    print(f"🔄 Получение данных из API {env}...")
     response = http_client.tariff()
     response.raise_for_status()
     live_data = response.json()
@@ -60,17 +62,24 @@ def create_snapshots(env="dev"):
 
 
 if __name__ == "__main__":
-    try:
-        count = create_snapshots("dev")
-        print(f"🎉 Успешно создано {count} секций")
+    import argparse
 
-        # Покажем где лежат файлы
-        snapshots_dir = project_root / "test_data" / "snapshots" / "dev"
-        if snapshots_dir.exists():
-            files = list(snapshots_dir.glob("*.json"))
-            print(f"📁 Файлы находятся в: {snapshots_dir.absolute()}")
+    parser = argparse.ArgumentParser(description='Создание снепшотов тарифов')
+    parser.add_argument('env', nargs='?', default='dev', choices=['dev', 'prod'],
+                        help='Окружение (dev или prod)')
+
+    args = parser.parse_args()
+
+    print(f"🚀 ЗАПУСК СОЗДАНИЯ СНЕПШОТОВ")
+    print(f"📝 Окружение: {args.env}")
+    print("=" * 50)
+
+    try:
+        count = create_snapshots(args.env)
+        print(f"\n🎉 УСПЕХ: Создано {count} секций для окружения {args.env}")
+        print(f"📁 Файлы сохранены в: {project_root / 'test_data' / 'snapshots' / args.env}")
     except Exception as e:
-        print(f"❌ Ошибка: {e}")
+        print(f"\n❌ ОШИБКА: {e}")
         import traceback
 
         traceback.print_exc()
