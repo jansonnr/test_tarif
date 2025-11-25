@@ -2,19 +2,12 @@ from typing import Dict, List, Optional
 
 
 def find_section_by_name(data: Dict, section_name: str) -> Optional[Dict]:
-    """Рекурсивно ищет секцию по имени в данных"""
-
-    def search_sections(sections):
-        for section in sections:
-            if section.get("sectionName") == section_name:
-                return section
-            if "sections" in section:
-                found = search_sections(section["sections"])
-                if found:
-                    return found
-        return None
-
-    return search_sections(data["price"]["sections"])
+    """Ищет секцию по имени (если структура плоская или почти плоская)"""
+    all_sections = get_all_sections(data)
+    for section in all_sections:
+        if section.get("sectionName") == section_name:
+            return section
+    return None
 
 
 def find_tariff_by_name(section: Dict, tariff_name: str) -> Optional[Dict]:
