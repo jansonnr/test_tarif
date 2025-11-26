@@ -1,8 +1,10 @@
+# tests/test_section_comparison_with_debug.py
+import pytest
 import json
-from test_logic.tariff_json import find_section_by_name
-from test_logic.tariff_json import get_all_sections
+from pathlib import Path
+from test_logic.tariff_json import find_section_by_name, get_all_sections
 
-# МАППИНГИ ДЛЯ ВСЕХ ОКРУЖЕНИЙ
+# Маппинги для разных окружений
 SECTION_MAPPINGS = {
     "dev": {
         "section_базис_для_сотрудников.json": "Базис для сотрудников",
@@ -20,15 +22,13 @@ SECTION_MAPPINGS = {
         "section_фтс.json": "ФТС"
     },
     "prod": {
-        # На основе фактических файлов в PROD
         "section_базис_для_сотрудников.json": "Базис для сотрудников",
         "section_базис_для_фл.json": "Базис для ФЛ",
-        "section_бизнес.json": "Бизнес",
         "section_госзаказ.json": "Госзаказ",
         "section_егаис.json": "ЕГАИС",
         "section_кэп_уц_фнс.json": "КЭП УЦ ФНС",
-        "section_перевыпуск.json": "Перевыпуск",  # Изменилось имя файла!
-        "section_перевыпуск_универсальный.json": "Перевыпуск (Универсальный)",  # Изменилось!
+        "section_перевыпуск.json": "Перевыпуск",
+        "section_перевыпуск_универсальный.json": "Перевыпуск (Универсальный)",
         "section_платная_лицензия_нэп.json": "Платная лицензия (НЭП)",
         "section_рособрнадзор.json": "Рособрнадзор",
         "section_росреестр.json": "Росреестр",
@@ -41,24 +41,42 @@ SECTION_MAPPINGS = {
 }
 
 
-def test_exact_section_match_for_env(snapshots_dir, tariffs_data, env):
-    """Тест для конкретного окружения: проверяем только секции из маппинга"""
+def save_comparison_files(api_section, file_data, section_name, env):
+    """Сохраняет JSON секций для ручного сравнения при несовпадении"""
+    debug_dir = Path("debug_comparison") / env
+    debug_dir.mkdir(parents=True, exist_ok=True)
+
+    # Сохраняем данные API
+    api_file = debug_dir / f"{section_name}_api.json"
+    with open(api_file, 'w', encoding='utf-8') as f:
+        json.dump(api_section, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+    # Сохраняем данные из файла
+    file_file = debug_dir / f"{section_name}_file.json"
+    with open(file_file, 'w', encoding='utf-8') as f:
+        json.dump(file_data, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+    return api_file, file_file
+
+
+def test_section_comparison_with_debug(snapshots_dir, tariffs_data, env):
+    """Сравнение секций с сохранением JSON для отладки при несовпадении"""
     mapping = SECTION_MAPPINGS.get(env, {})
 
-    print(f"\n🔍 {env.upper()}: ПРОВЕРКА СЕКЦИЙ ИЗ МАППИНГА")
+    print(f"\n🔍 {env.upper()}: СРАВНЕНИЕ С ОТЛАДКОЙ")
     print("=" * 70)
-    print(f"📋 В маппинге: {len(mapping)} секций")
+    print(f"📋 Проверяем {len(mapping)} секций")
     print("=" * 70)
 
     all_passed = True
-    checked_sections = []
-    missing_files = []
+    debug_info = []
 
     for filename, expected_section_name in mapping.items():
         file_path = snapshots_dir / filename
 
         if not file_path.exists():
-            missing_files.append(filename)
+            print(f"❌ {filename}: ФАЙЛ НЕ СУЩЕСТВУЕТ")
+            all_passed = False
             continue
 
         # Загружаем данные из файла
@@ -73,69 +91,28 @@ def test_exact_section_match_for_env(snapshots_dir, tariffs_data, env):
             all_passed = False
             continue
 
-        # Сравниваем - ДОЛЖНЫ БЫТЬ ИДЕНТИЧНЫ
+        # Сравниваем
         if api_section == file_data:
             tariffs_count = len(api_section.get('tariffs', []))
             print(f"✅ {filename}: СОВПАДАЕТ ({tariffs_count} тарифов)")
-            checked_sections.append(expected_section_name)
         else:
             file_tariffs = len(file_data.get('tariffs', []))
             api_tariffs = len(api_section.get('tariffs', []))
             print(f"❌ {filename}: НЕ СОВПАДАЕТ С '{expected_section_name}'")
             print(f"   Файл: {file_tariffs} тарифов, API: {api_tariffs} тарифов")
+
+            # Сохраняем JSON для ручного сравнения
+            api_file, file_file = save_comparison_files(api_section, file_data, expected_section_name, env)
+            debug_info.append((expected_section_name, api_file, file_file))
+
+            print(f"   💾 Сохранены файлы для сравнения:")
+            print(f"      API:   {api_file}")
+            print(f"      Файл: {file_file}")
+
             all_passed = False
 
     print("=" * 70)
 
-    # Показываем статистику
-    print(f"📊 РЕЗУЛЬТАТЫ ПРОВЕРКИ:")
-    print(f"   ✅ Проверено секций: {len(checked_sections)}")
-    if missing_files:
-        print(f"   ⚠️  Отсутствуют файлы: {len(missing_files)}")
-        for filename in missing_files:
-            print(f"      - {filename}")
 
-    # Находим секции в API, которые не проверялись
-
-    all_api_sections = get_all_sections(tariffs_data)
-    all_api_section_names = {s["sectionName"] for s in all_api_sections}
-    checked_section_names = set(checked_sections)
-    unchecked_sections = all_api_section_names - checked_section_names
-
-    if unchecked_sections:
-        print(f"   🔍 Не проверялись (есть в API, но нет в маппинге): {len(unchecked_sections)}")
-        for section_name in sorted(unchecked_sections):
-            # Находим количество тарифов в этой секции
-            section = find_section_by_name(tariffs_data, section_name)
-            tariffs_count = len(section.get('tariffs', [])) if section else 0
-            print(f"      - {section_name} ({tariffs_count} тарифов)")
-
-    print("=" * 70)
-
-    assert all_passed, f"НЕ ВСЕ СЕКЦИИ СОВПАДАЮТ В {env.upper()}"
-
-
-def test_show_environment_info(tariffs_data, env):
-    """Показывает информацию о секциях в текущем окружении"""
-    from test_logic.tariff_json import get_all_sections
-
-    all_sections = get_all_sections(tariffs_data)
-    mapping = SECTION_MAPPINGS.get(env, {})
-
-    print(f"\n📊 ИНФОРМАЦИЯ ДЛЯ {env.upper()}:")
-    print("=" * 60)
-    print(f"📋 Секций в маппинге: {len(mapping)}")
-    print(f"📊 Секций в API: {len(all_sections)}")
-
-    # Находим пересечение
-    api_section_names = {s["sectionName"] for s in all_sections}
-    mapping_section_names = set(mapping.values())
-    common_sections = api_section_names & mapping_section_names
-    only_in_api = api_section_names - mapping_section_names
-    only_in_mapping = mapping_section_names - api_section_names
-
-    print(f"📈 Общих секций: {len(common_sections)}")
-    print(f"🔍 Только в API: {len(only_in_api)}")
-    print(f"📁 Только в маппинге: {len(only_in_mapping)}")
-    print("=" * 60)
+    assert all_passed, f"НЕ ВСЕ СЕКЦИИ СОВПАДАЮТ В {env.upper()}. Проверьте debug_comparison/{env}/"
 

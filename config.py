@@ -1,6 +1,5 @@
-# config.py
 from environs import Env
-from typing import Dict
+
 
 env = Env()
 
