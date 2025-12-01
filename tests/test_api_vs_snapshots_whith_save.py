@@ -1,8 +1,6 @@
-# tests/test_section_comparison_with_debug.py
-import pytest
 import json
 from pathlib import Path
-from test_logic.tariff_json import find_section_by_name, get_all_sections
+from test_logic.tariff_json import find_section_by_name
 
 # Маппинги для разных окружений
 SECTION_MAPPINGS = {
@@ -59,7 +57,7 @@ def save_comparison_files(api_section, file_data, section_name, env):
     return api_file, file_file
 
 
-def test_section_comparison_with_debug(snapshots_dir, tariffs_data, env):
+def test_section_comparison_with_debug(snapshots_dir, tariffs_http_client, env):
     """Сравнение секций с сохранением JSON для отладки при несовпадении"""
     mapping = SECTION_MAPPINGS.get(env, {})
 
@@ -84,6 +82,9 @@ def test_section_comparison_with_debug(snapshots_dir, tariffs_data, env):
             file_data = json.load(f)
 
         # Ищем секцию в API
+        tariffs_http_client_response = tariffs_http_client
+        assert tariffs_http_client_response.status_code == 200
+        tariffs_data = tariffs_http_client_response.json()
         api_section = find_section_by_name(tariffs_data, expected_section_name)
 
         if not api_section:

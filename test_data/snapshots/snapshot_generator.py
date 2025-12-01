@@ -22,7 +22,7 @@ def generate_section_files_for_env(env_name: str):
     api_data = response.json()
 
     # Директория для сохранения
-    project_root = Path(__file__).parent.parent
+    project_root = Path(__file__)
     snapshots_dir = project_root / "test_data" / "snapshots" / env_name
     snapshots_dir.mkdir(parents=True, exist_ok=True)
 

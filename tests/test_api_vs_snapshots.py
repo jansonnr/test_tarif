@@ -20,15 +20,14 @@ SECTION_MAPPINGS = {
         "section_фтс.json": "ФТС"
     },
     "prod": {
-        # На основе фактических файлов в PROD
         "section_базис_для_сотрудников.json": "Базис для сотрудников",
         "section_базис_для_фл.json": "Базис для ФЛ",
         "section_бизнес.json": "Бизнес",
         "section_госзаказ.json": "Госзаказ",
         "section_егаис.json": "ЕГАИС",
         "section_кэп_уц_фнс.json": "КЭП УЦ ФНС",
-        "section_перевыпуск.json": "Перевыпуск",  # Изменилось имя файла!
-        "section_перевыпуск_универсальный.json": "Перевыпуск (Универсальный)",  # Изменилось!
+        "section_перевыпуск.json": "Перевыпуск",
+        "section_перевыпуск_универсальный.json": "Перевыпуск (Универсальный)",
         "section_платная_лицензия_нэп.json": "Платная лицензия (НЭП)",
         "section_рособрнадзор.json": "Рособрнадзор",
         "section_росреестр.json": "Росреестр",
@@ -41,14 +40,12 @@ SECTION_MAPPINGS = {
 }
 
 
-def test_exact_section_match_for_env(snapshots_dir, tariffs_data, env):
+def test_exact_section_match_for_env(snapshots_dir, tariffs_http_client, env):
     """Тест для конкретного окружения: проверяем только секции из маппинга"""
     mapping = SECTION_MAPPINGS.get(env, {})
 
     print(f"\n🔍 {env.upper()}: ПРОВЕРКА СЕКЦИЙ ИЗ МАППИНГА")
-    print("=" * 70)
     print(f"📋 В маппинге: {len(mapping)} секций")
-    print("=" * 70)
 
     all_passed = True
     checked_sections = []
@@ -66,6 +63,9 @@ def test_exact_section_match_for_env(snapshots_dir, tariffs_data, env):
             file_data = json.load(f)
 
         # Ищем секцию в API
+        tariffs_http_client_response = tariffs_http_client
+        assert tariffs_http_client_response.status_code == 200
+        tariffs_data = tariffs_http_client_response.json()
         api_section = find_section_by_name(tariffs_data, expected_section_name)
 
         if not api_section:
@@ -104,21 +104,16 @@ def test_exact_section_match_for_env(snapshots_dir, tariffs_data, env):
 
     if unchecked_sections:
         print(f"   🔍 Не проверялись (есть в API, но нет в маппинге): {len(unchecked_sections)}")
-        for section_name in sorted(unchecked_sections):
-            # Находим количество тарифов в этой секции
-            section = find_section_by_name(tariffs_data, section_name)
-            tariffs_count = len(section.get('tariffs', [])) if section else 0
-            print(f"      - {section_name} ({tariffs_count} тарифов)")
-
-    print("=" * 70)
 
     assert all_passed, f"НЕ ВСЕ СЕКЦИИ СОВПАДАЮТ В {env.upper()}"
 
 
-def test_show_environment_info(tariffs_data, env):
+def test_show_environment_info(tariffs_http_client, env):
     """Показывает информацию о секциях в текущем окружении"""
     from test_logic.tariff_json import get_all_sections
-
+    tariffs_http_client_response = tariffs_http_client
+    assert tariffs_http_client_response.status_code == 200
+    tariffs_data = tariffs_http_client_response.json()
     all_sections = get_all_sections(tariffs_data)
     mapping = SECTION_MAPPINGS.get(env, {})
 
@@ -138,4 +133,3 @@ def test_show_environment_info(tariffs_data, env):
     print(f"🔍 Только в API: {len(only_in_api)}")
     print(f"📁 Только в маппинге: {len(only_in_mapping)}")
     print("=" * 60)
-
