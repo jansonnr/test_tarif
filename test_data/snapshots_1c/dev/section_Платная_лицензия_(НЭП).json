@@ -1,0 +1,64 @@
+{
+  "sectionName": "Платная лицензия (НЭП)",
+  "limits": [
+    {
+      "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+      "name": "Список доступных криптопровайдеров",
+      "value": "[ 11 ]"
+    },
+    {
+      "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+      "name": "Только КЦР"
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "ad2771ec-415f-4eb6-8e27-43d0df47237c",
+      "tariffId": "4ae95866-82bf-4eca-a0b6-1c6e50c5f678",
+      "tariffName": "Платная лицензия (НЭП) КЦР",
+      "tariffType": "Основная лицензия",
+      "price": 400.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [
+        {
+          "name": "НЭП",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "Эмуляция НЭП УЦ",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": []
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "b87bcc69-cec7-4da9-876d-7bcbd6fee7bf",
+          "attributeName": "Сертификат НЭП",
+          "number": 1,
+          "validity": 1,
+          "validityUnitId": 3
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

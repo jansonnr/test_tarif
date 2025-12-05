@@ -1,0 +1,302 @@
+{
+  "sectionName": "Росреестр",
+  "limits": null,
+  "tariffs": [
+    {
+      "id": "e473614d-d69f-4a1e-87f7-7b176b41dd81",
+      "tariffId": "83065f23-8740-4752-a0af-5e0836b669cd",
+      "tariffName": "Арбитражный управляющий, Конкурсный управляющий, Внешний управляющий (1.2.643.5.1.24.2.27)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.27",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "39ecc3aa-d4a6-47b1-aedb-e0ecdf680416",
+          "attributeName": "Арбитражный управляющий",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "d616b953-1c65-437b-bc54-67148335e1f1",
+      "tariffId": "0bc1bfc1-69fd-40ef-81b3-e792cb17e706",
+      "tariffName": "Залогодержатель (1.2.643.5.1.24.2.29)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.29",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "a72a3472-44a9-4aa6-8eb9-9a096340bdc3",
+          "attributeName": "Залогодержатель",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "501dbb82-2411-4ced-925d-e143963b1c61",
+      "tariffId": "e80b8c23-fe21-4253-a45f-9eeec9d15677",
+      "tariffName": "Кадастровый инженер (1.2.643.5.1.24.2.1.3.1)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.1.3.1",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "ec571680-b127-42f9-82ea-aaeee14a06e6",
+          "attributeName": "Кадастровый инженер",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "701e08db-3fcf-4c04-a5ab-b19d3d640514",
+      "tariffId": "0fc9eddd-be15-46f4-b0a5-8d70f5168826",
+      "tariffName": "Лица, имеющие право на наследование недвижимого имущества правообладателя по завещанию или по закону (1.2.643.5.1.24.2.63)",
+      "tariffType": "Расширение лицензии",
+      "price": null,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.63",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "c2626f29-779b-4d74-a49e-c7446b2a78ba",
+          "attributeName": "Лица, имеющие право на наследование недвижимого имущества правообладателя по завещанию или по закону",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "847783c0-464a-4b2d-8e32-9f44c3cb0551",
+      "tariffId": "423ce7fc-71f4-4e89-84d4-a3a06c317cf1",
+      "tariffName": "Нотариус (1.2.643.5.1.24.2.26)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "dba02e4f-3a97-44d7-8b19-a0dac8e58674",
+          "name": "Физическое лицо"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.26",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "383faef1-ac4b-4088-a698-616009c4a591",
+          "attributeName": "Нотариус",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "7952b997-70a3-42c8-bc59-1875c3b16786",
+      "tariffId": "b8344d6d-75c5-4e1d-87d0-a796f6fc9c62",
+      "tariffName": "Орган регистрации прав (1.2.643.5.1.24.2.2.2)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+          "name": "Юридическое лицо"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.2.2",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [
+        {
+          "name": "Документ, подтверждающий полномочия",
+          "alias": "ДокументПолномочияРосреестр",
+          "onlyforProxy": false
+        }
+      ],
+      "attributes": [
+        {
+          "attributeGuid": "e48442ad-60d4-4c21-8738-677bfef0c920",
+          "attributeName": "Сотрудники Росреестра и его территориальных органов",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "268ac0f4-8083-4624-9e64-52631b24d510",
+      "tariffId": "5811fbfa-3677-4f88-9c84-b6cc2ba37749",
+      "tariffName": "Правообладатель – физическое лицо (1.2.643.5.1.24.2.1.3)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "dba02e4f-3a97-44d7-8b19-a0dac8e58674",
+          "name": "Физическое лицо"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.1.3",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "7752397d-efb1-4959-9ea9-78877b46821c",
+          "attributeName": "Правообладатель - физическое лицо или его законный представитель; лицо, получившее доверенность от правообладателя или его законного представителя",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "28c04299-46d1-4690-be00-194c66cdf225",
+      "tariffId": "f8d47988-b732-4033-81d1-52a05034c83b",
+      "tariffName": "Правообладатель – юридическое лицо (1.2.643.5.1.24.2.30)",
+      "tariffType": "Расширение лицензии",
+      "price": 0.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "42d1f272-97a8-4c67-b15e-b9965e748d4e",
+          "name": "Юридическое лицо"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.5.1.24.2.30",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "e34b64bc-f4ff-4134-8605-ca51178788ba",
+          "attributeName": "Правообладатель – юридическое лицо",
+          "number": 1
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

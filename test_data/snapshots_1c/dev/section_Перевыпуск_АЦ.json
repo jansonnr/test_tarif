@@ -1,0 +1,122 @@
+{
+  "sectionName": "Перевыпуск АЦ",
+  "limits": null,
+  "tariffs": [
+    {
+      "id": "c17b5c2b-21b8-4c5e-b873-e32b7044325b",
+      "tariffId": "feaf17ca-7968-4541-a57a-d5234ee76314",
+      "tariffName": "Расширение \"Регистрация сертификата в системе Альта-софт\"",
+      "tariffType": "Расширение лицензии",
+      "price": null,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.3.45.10.100",
+          "limits": [
+            {
+              "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+              "name": "Только с Крипто Про"
+            }
+          ]
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "d56cea40-e8f7-42d4-bb9d-9a244aacb33c",
+          "attributeName": "Альта-Софт",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "160e95cf-6f3e-4c63-a5a0-953356b0d3a8",
+      "tariffId": "643c3b62-3a51-4388-8715-e83dfbdbfff7",
+      "tariffName": "Расширение ЭТП \"Фабрикант\"",
+      "tariffType": "Расширение лицензии",
+      "price": null,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "8a104fd6-8bd1-401c-88c6-18a8d42e516a",
+          "attributeName": "Фабрикант"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "688a7519-67b2-4dec-9fd6-7a3e1da38803",
+      "tariffId": "ea904826-0a0f-4ba6-baec-6ba6eb7ac7f5",
+      "tariffName": "Расширение \"B2B-CENTER\"",
+      "tariffType": "Расширение лицензии",
+      "price": null,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "cd3765e0-c4c1-4e91-9949-e585c5401eaf",
+      "tariffId": "52a518a7-ed1d-4d1e-9206-8ad904938fcf",
+      "tariffName": "Расширение \"B2B-CENTER PLUS\"",
+      "tariffType": "Расширение лицензии",
+      "price": null,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

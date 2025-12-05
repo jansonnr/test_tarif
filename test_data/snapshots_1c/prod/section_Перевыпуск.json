@@ -1,0 +1,250 @@
+{
+  "sectionName": "Перевыпуск",
+  "limits": null,
+  "tariffs": [
+    {
+      "id": "31a91211-16bf-4ce3-bdc5-5fe4087b41bd",
+      "tariffId": "feaf17ca-7968-4541-a57a-d5234ee76314",
+      "tariffName": "Регистрация сертификата в системе Альта-софт",
+      "tariffType": "Расширение лицензии",
+      "price": 1300.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.3.45.10.100",
+          "limits": [
+            {
+              "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+              "name": "Только с Крипто Про"
+            }
+          ]
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "d56cea40-e8f7-42d4-bb9d-9a244aacb33c",
+          "attributeName": "Альта-Софт",
+          "number": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "54831b44-5ecf-4477-979f-fe25cfd78622",
+      "tariffId": "c02400fb-e897-4b50-b147-63bf36bb5b91",
+      "tariffName": "Регистрация сертификата в системе Альта-софт КЦР",
+      "tariffType": "Расширение лицензии",
+      "price": 1300.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [
+        {
+          "value": "1.2.643.3.45.10.100",
+          "limits": []
+        }
+      ],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "d56cea40-e8f7-42d4-bb9d-9a244aacb33c",
+          "attributeName": "Альта-Софт",
+          "number": 1
+        }
+      ],
+      "article": "УТ-00003449"
+    },
+    {
+      "id": "0aa85c25-478c-4a87-8436-a76a42d23dae",
+      "tariffId": "ea904826-0a0f-4ba6-baec-6ba6eb7ac7f5",
+      "tariffName": "Расширение \"B2B-CENTER\"",
+      "tariffType": "Расширение лицензии",
+      "price": 2800.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": "ЭТП-B2B-center"
+    },
+    {
+      "id": "aa9a6b9d-3d50-4a2a-bd43-b5aab5f9ea39",
+      "tariffId": "b3bc51db-2ed9-409d-a665-8939ddb64658",
+      "tariffName": "Расширение \"B2B-CENTER\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "price": 2800.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": "УТ-00003234"
+    },
+    {
+      "id": "35632846-8eb7-411d-8a5e-0caa79bfd77b",
+      "tariffId": "d6b71c85-9c3e-4083-84b5-b9a5edfac732",
+      "tariffName": "Расширение ЭТП \"Фабрикант\"",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Фабрикант\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "8a104fd6-8bd1-401c-88c6-18a8d42e516a",
+          "attributeName": "Фабрикант"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "8c7bb6d9-2e2b-46a9-b543-ff6da8965a02",
+      "tariffId": "e0de4acd-5084-4f71-aaf2-492dac89a407",
+      "tariffName": "Расширение ЭТП \"Фабрикант\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение для использования ЭП на ЭТП \"Фабрикант\"",
+      "price": 3000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "8a104fd6-8bd1-401c-88c6-18a8d42e516a",
+          "attributeName": "Фабрикант"
+        }
+      ],
+      "article": "УТ-00003237"
+    },
+    {
+      "id": "9157f623-df18-4bd7-921a-a52f204cf88a",
+      "tariffId": "52a518a7-ed1d-4d1e-9206-8ad904938fcf",
+      "tariffName": "Расширение \"B2B-CENTER PLUS\"",
+      "tariffType": "Расширение лицензии",
+      "price": 9500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "a67536a4-d9a7-41fa-9038-5f384908c625",
+      "tariffId": "cfb7f7e0-1578-4639-8def-2cb376cc4476",
+      "tariffName": "Расширение \"B2B-CENTER PLUS\" КЦР",
+      "tariffType": "Расширение лицензии",
+      "price": 9500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "5157dbe0-adef-4f9f-aacd-914f85635e0e",
+          "attributeName": "B2B"
+        }
+      ],
+      "article": "УТ-00003235"
+    }
+  ],
+  "sections": []
+}

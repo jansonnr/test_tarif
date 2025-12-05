@@ -1,0 +1,125 @@
+{
+  "sectionName": "Базис для ФЛ",
+  "limits": null,
+  "tariffs": [
+    {
+      "id": "cfa56b18-d536-4341-8054-cc1f5b7cc6aa",
+      "tariffId": "57b8591f-2ef8-4777-88a3-95769b4f54b5",
+      "tariffName": "+3 месяца к сроку действия сертификата",
+      "tariffMarketingName": "+3 месяца к сроку действия сертификата",
+      "tariffType": "Расширение лицензии",
+      "price": 500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11, 17, 18 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": false,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "validity": 15,
+          "validityUnitId": 1
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "9a48412d-b24a-4aa2-ac98-d716cf591754",
+      "tariffId": "ebbb47d7-715d-4ddd-adc5-ecad16006c08",
+      "tariffName": "Расширенная лицензия",
+      "tariffType": "Расширение лицензии",
+      "note": "Расширение позволяет использовать СКЗИ КриптоПро CSP на любом рабочем месте где установлена программа без приобретения годовой или бессрочной лицензии на всем сроке действия сертификата ЭП",
+      "price": 590.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "b29a556c-227c-4780-8192-ba883416f063",
+          "name": "Лицензия КриптоПро в структуре сертификата"
+        },
+        {
+          "id": "0ed05885-92ce-43ef-a445-4856b065b679",
+          "name": "Только с Крипто Про"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 11 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.8461984.13190941.10568297.9743651.18877.43432",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": true,
+                  "isDefault": true
+                },
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "a3cbf1a7-4da5-4e86-8045-fccd6e8dcef2",
+          "attributeName": "Шаблон сертификата"
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}

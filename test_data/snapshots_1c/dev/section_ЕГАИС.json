@@ -1,0 +1,232 @@
+{
+  "sectionName": "ЕГАИС",
+  "limits": [
+    {
+      "id": "f6eb106b-2d2a-451c-98e2-64d9e5c998d0",
+      "name": "Только с Ja Carta ГОСТ/SE и Рутокен ЭЦП 2.0"
+    },
+    {
+      "id": "19c6bf21-f5a3-49d5-818f-84944b055e55",
+      "name": "Максимальное число расширений",
+      "value": "0"
+    },
+    {
+      "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+      "name": "Список доступных криптопровайдеров",
+      "value": "[ 17, 18 ]"
+    },
+    {
+      "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+      "name": "Только КЦР"
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "4438c54f-60d2-4dce-9834-f85f7dc02f99",
+      "tariffId": "c3f86f59-bea5-4b69-9e61-c800754df585",
+      "tariffName": "Платная лицензия (ЕГАИС)",
+      "tariffType": "Основная лицензия",
+      "note": "Стоимость тарифа составляет: 2000 руб\r\n\r\nТариф включает в себя:\r\n\r\n- квалифицированный сертификат электронной подписи для юридических лиц и индивидуальных предпринимателей.\r\n\r\nТариф позволяет:\r\n\r\n- осуществлять юридически значимый защищенный электронный документооборот с ЕГАИС ФСРАР.\r\n\r\n*Подробную информацию о тарифе уточняйте у операторов сервиса 1С-ЭТП",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "f6eb106b-2d2a-451c-98e2-64d9e5c998d0",
+          "name": "Только с Ja Carta ГОСТ/SE и Рутокен ЭЦП 2.0"
+        },
+        {
+          "id": "19c6bf21-f5a3-49d5-818f-84944b055e55",
+          "name": "Максимальное число расширений",
+          "value": "0"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 17, 18 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.8461984.13190941.10568297.9743651.18877.43432",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                },
+                {
+                  "type": "Специализированный",
+                  "oid": "1.2.643.2.2.50.1.9.3311484.2853914.11814819.12678195.64412.45518",
+                  "validity": 1,
+                  "validityUnitId": 3,
+                  "isCryptoProTemplate": false,
+                  "isDefault": true
+                }
+              ]
+            }
+          ],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.28.2",
+              "limits": []
+            }
+          ]
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "number": 1,
+          "validity": 1,
+          "validityUnitId": 3
+        },
+        {
+          "attributeGuid": "c96db49d-7997-426e-9ec5-b93b532d048e",
+          "attributeName": "Система декларирования ФСРАР"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "c4ff81cb-6b8b-4408-98c5-3d70fbdc8d4d",
+      "tariffId": "9a657058-3a4c-49a2-9b30-2d1ec768e578",
+      "tariffName": "Платная лицензия (ЕГАИС) 12 мес КЦР",
+      "tariffType": "Основная лицензия",
+      "note": "Тариф включает в себя:\r\n\r\n- квалифицированный сертификат электронной подписи для юридических лиц и индивидуальных предпринимателей.\r\n\r\nТариф позволяет:\r\n\r\n- осуществлять юридически значимый защищенный электронный документооборот с ЕГАИС ФСРАР.\r\n\r\n*Подробную информацию о тарифе уточняйте у операторов сервиса Астрал-ЭТ",
+      "price": 2000.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "f6eb106b-2d2a-451c-98e2-64d9e5c998d0",
+          "name": "Только с Ja Carta ГОСТ/SE и Рутокен ЭЦП 2.0"
+        },
+        {
+          "id": "19c6bf21-f5a3-49d5-818f-84944b055e55",
+          "name": "Максимальное число расширений",
+          "value": "0"
+        },
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 17, 18 ]"
+        },
+        {
+          "id": "a68ad91e-264d-4466-896d-e71aedcd2eef",
+          "name": "Только КЦР"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": true,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": [
+            {
+              "value": "1.2.643.5.1.28.2",
+              "limits": []
+            }
+          ]
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "number": 1,
+          "validity": 1,
+          "validityUnitId": 3
+        },
+        {
+          "attributeGuid": "c96db49d-7997-426e-9ec5-b93b532d048e",
+          "attributeName": "Система декларирования ФСРАР"
+        }
+      ],
+      "article": null
+    },
+    {
+      "id": "1c2ccff3-1e16-44ff-b233-48314f6d1540",
+      "tariffId": "57b8591f-2ef8-4777-88a3-95769b4f54b5",
+      "tariffName": "+3 месяца к сроку действия сертификата",
+      "tariffMarketingName": "+3 месяца к сроку действия сертификата",
+      "tariffType": "Расширение лицензии",
+      "price": 500.0,
+      "display": true,
+      "limits": [
+        {
+          "id": "c9a7f64e-bef1-431a-8cd4-f685d8e245a1",
+          "name": "Список доступных криптопровайдеров",
+          "value": "[ 9, 11, 17, 18 ]"
+        }
+      ],
+      "templates": [
+        {
+          "name": "Квалифицированный",
+          "isUnstructuredNameUsed": false,
+          "cas": [
+            {
+              "name": "ЗАО \"Калуга Астрал\" КриптоПро Тест",
+              "isDefault": false,
+              "isFns": false,
+              "isRoseltorg": false,
+              "caTemplates": [
+                {
+                  "type": "Лицензия КриптоПро в структуре сертификата",
+                  "oid": "1.2.643.2.2.50.1.9.12381161.765081.12535804.5723926.53976.38714",
+                  "validity": 15,
+                  "validityUnitId": 1,
+                  "isCryptoProTemplate": true,
+                  "isDefault": false
+                }
+              ]
+            }
+          ],
+          "oids": []
+        }
+      ],
+      "oids": [],
+      "additionalDocuments": [],
+      "attributes": [
+        {
+          "attributeGuid": "bea894d6-d02c-4858-9bed-1ffd155a4716",
+          "attributeName": "Сертификат КЭП",
+          "validity": 15,
+          "validityUnitId": 1
+        }
+      ],
+      "article": null
+    }
+  ],
+  "sections": []
+}
