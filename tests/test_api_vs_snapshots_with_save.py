@@ -38,40 +38,6 @@ SECTION_MAPPINGS = {
     }
 }
 
-SECTION_MAPPINGS_1c = {
-    "dev": {
-        "section_Базис.json": "Базис для сотрудников",
-        "section_Базис_для_ФЛ.json": "Базис для ФЛ",
-        "section_бизнес.json": "Бизнес",
-        "section_госзаказ.json": "Госзаказ",
-        "section_ЕГАИС.json": "ЕГАИС",
-        "section_КЭП_УЦ_ФНС.json": "КЭП УЦ ФНС",
-        "section_Перевыпуск_АЦ.json": "Перевыпуск АЦ",
-        "section_Перевыпуск_АЦ_(Универсальный).json": "Перевыпуск АЦ (Универсальный)",
-        "section_Платная_Лицензия_(НЭП).json": "Платная лицензия (НЭП)",
-        "section_рособрнадзор.json": "Рособрнадзор",
-        "section_росреестр.json": "Росреестр",
-        "section_универсальный.json": "Универсальный",
-        "section_фтс.json": "ФТС"
-    },
-    "prod": {
-        "section_базис_для_сотрудников.json": "Базис для сотрудников",
-        "section_базис_для_фл.json": "Базис для ФЛ",
-        "section_госзаказ.json": "Госзаказ",
-        "section_егаис.json": "ЕГАИС",
-        "section_кэп_уц_фнс.json": "КЭП УЦ ФНС",
-        "section_перевыпуск.json": "Перевыпуск",
-        "section_перевыпуск_универсальный.json": "Перевыпуск (Универсальный)",
-        "section_платная_лицензия_нэп.json": "Платная лицензия (НЭП)",
-        "section_рособрнадзор.json": "Рособрнадзор",
-        "section_росреестр.json": "Росреестр",
-        "section_универсальный.json": "Универсальный",
-        "section_фтс.json": "ФТС",
-        "section_смэв.json": "СМЭВ",
-        "section_смэв_ул.json": "СМЭВ УЛ",
-        "section_смэв_ул+ис.json": "СМЭВ УЛ+ИС"
-    }
-}
 
 
 def save_comparison_files(api_section, file_data, section_name, env):
@@ -92,9 +58,9 @@ def save_comparison_files(api_section, file_data, section_name, env):
     return api_file, file_file
 
 
-def test_section_comparison_with_debug(snapshots_dir, tariffs_http_client, env):
+def test_section_comparison_with_debug(snapshots_dir_et, tariffs_http_client_et, env):
     """Сравнение секций с сохранением JSON для отладки при несовпадении"""
-    mapping = SECTION_MAPPINGS_1c.get(env, {})
+    mapping = SECTION_MAPPINGS.get(env, {})
 
     print(f"\n🔍 {env.upper()}: СРАВНЕНИЕ С ОТЛАДКОЙ")
     print("=" * 70)
@@ -105,7 +71,7 @@ def test_section_comparison_with_debug(snapshots_dir, tariffs_http_client, env):
     debug_info = []
 
     for filename, expected_section_name in mapping.items():
-        file_path = snapshots_dir / filename
+        file_path = snapshots_dir_et / filename
 
         if not file_path.exists():
             print(f"❌ {filename}: ФАЙЛ НЕ СУЩЕСТВУЕТ")
@@ -117,7 +83,7 @@ def test_section_comparison_with_debug(snapshots_dir, tariffs_http_client, env):
             file_data = json.load(f)
 
         # Ищем секцию в API
-        tariffs_http_client_response = tariffs_http_client
+        tariffs_http_client_response = tariffs_http_client_et
         assert tariffs_http_client_response.status_code == 200
         tariffs_data = tariffs_http_client_response.json()
         api_section = find_section_by_name(tariffs_data, expected_section_name)

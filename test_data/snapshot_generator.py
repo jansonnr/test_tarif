@@ -1,19 +1,14 @@
 import json
 from pathlib import Path
-from config import config
+from config import Config
 from app_driver.wr_http_client import wrHttpClient
 from test_logic.tariff_json import get_all_sections
 
 
 def generate_section_files_for_env(env_name: str):
-    """
-    Генерирует файлы для всех секций для указанного окружения
 
-    Args:
-        env_name: Имя окружения (dev/prod)
-    """
     # Получаем URL для окружения
-    base_url = config.get_base_url(env_name)
+    base_url = Config.get_base_url(env_name)
 
     # Создаем HTTP клиент и получаем данные
     http_client = wrHttpClient(base_url)
@@ -22,7 +17,7 @@ def generate_section_files_for_env(env_name: str):
     api_data = response.json()
 
     # Директория для сохранения
-    project_root = Path(__file__)
+    project_root = Path(__file__).parent.parent
     snapshots_dir = project_root / "test_data" / "snapshots_1c" / env_name
     snapshots_dir.mkdir(parents=True, exist_ok=True)
 
@@ -64,7 +59,7 @@ def generate_section_files_for_both_envs():
     for env_name in ["dev", "prod"]:
         print(f"\n{'=' * 50}")
         print(f"🔄 Обработка окружения: {env_name}")
-        print(f"📡 URL: {config.get_base_url(env_name)}")
+        print(f"📡 URL: {Config.get_base_url(env_name)}")
         print(f"📁 Директория: test_data/snapshots/{env_name}")
         print(f"{'=' * 50}")
 
