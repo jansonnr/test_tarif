@@ -1,65 +1,14 @@
 import json
-from pathlib import Path
 from test_logic.tariff_json import find_section_by_name
-
-# Маппинги для разных окружений
-
-SECTION_MAPPINGS_1c = {
-    "dev": {
-        "section_Базис.json": "Базис для сотрудников",
-        "section_Базис_для_ФЛфл.json": "Базис для ФЛ",
-        "section_ЕГАИС.json": "ЕГАИС",
-        "section_КЭП_УЦ_ФНС.json": "КЭП УЦ ФНС",
-        "section_Перевыпуск.json": "Перевыпуск",
-        "section_Перевыпуск_(Универсальный).json": "Перевыпуск (Универсальный)",
-        "section_Платная_лицензия_(НЭП).json": "Платная лицензия (НЭП)",
-        "section_Рособрнадзор.json": "Рособрнадзор",
-        "section_Росреестр.json": "Росреестр",
-        "section_Универсальный.json": "Универсальный",
-        "section_ФТС.json": "ФТС",
-        "section_СМЭВ.json": "СМЭВ",
-        "section_СМЭВ_УЛ.json": "СМЭВ УЛ",
-        "section_СМЭВ_УЛ+ИС.json": "СМЭВ УЛ+ИС"
-    },
-    "prod": {
-        "section_Базис.json": "Базис для сотрудников",
-        "section_Базис_для_ФЛфл.json": "Базис для ФЛ",
-        "section_ЕГАИС.json": "ЕГАИС",
-        "section_КЭП_УЦ_ФНС.json": "КЭП УЦ ФНС",
-        "section_Перевыпуск.json": "Перевыпуск",
-        "section_Перевыпуск_(Универсальный).json": "Перевыпуск (Универсальный)",
-        "section_Платная_лицензия_(НЭП).json": "Платная лицензия (НЭП)",
-        "section_Рособрнадзор.json": "Рособрнадзор",
-        "section_Росреестр.json": "Росреестр",
-        "section_Универсальный.json": "Универсальный",
-        "section_ФТС.json": "ФТС",
-        "section_СМЭВ.json": "СМЭВ",
-        "section_СМЭВ_УЛ.json": "СМЭВ УЛ",
-        "section_СМЭВ_УЛ+ИС.json": "СМЭВ УЛ+ИС"
-    }
-}
+from config import config
+from app_driver.wr_http_client import wrHttpClient
+from test_data.selection_mapping_1c import SECTION_MAPPINGS_1c
+from helper_save_difference import save_comparison_files
 
 
-def save_comparison_files(api_section, file_data, section_name, env):
-    """Сохраняет JSON секций для ручного сравнения при несовпадении"""
-    debug_dir = Path("debug_comparison") / env
-    debug_dir.mkdir(parents=True, exist_ok=True)
-
-    # Сохраняем данные API
-    api_file = debug_dir / f"{section_name}_api.json"
-    with open(api_file, 'w', encoding='utf-8') as f:
-        json.dump(api_section, f, ensure_ascii=False, indent=2, sort_keys=True)
-
-    # Сохраняем данные из файла
-    file_file = debug_dir / f"{section_name}_file.json"
-    with open(file_file, 'w', encoding='utf-8') as f:
-        json.dump(file_data, f, ensure_ascii=False, indent=2, sort_keys=True)
-
-    return api_file, file_file
-
-
-def test_section_comparison_with_debug(snapshots_dir_1c, tariffs_http_client_1c, env):
+def test_section_comparison_with_debug():
     """Сравнение секций с сохранением JSON для отладки при несовпадении"""
+    env = config.ENV
     mapping = SECTION_MAPPINGS_1c.get(env, {})
 
     print(f"\n🔍 {env.upper()}: СРАВНЕНИЕ С ОТЛАДКОЙ")
@@ -71,7 +20,7 @@ def test_section_comparison_with_debug(snapshots_dir_1c, tariffs_http_client_1c,
     debug_info = []
 
     for filename, expected_section_name in mapping.items():
-        file_path = snapshots_dir_1c / filename
+        file_path = config.snapshots_dir_1c / filename
 
         if not file_path.exists():
             print(f"❌ {filename}: ФАЙЛ НЕ СУЩЕСТВУЕТ")
@@ -83,7 +32,8 @@ def test_section_comparison_with_debug(snapshots_dir_1c, tariffs_http_client_1c,
             file_data = json.load(f)
 
         # Ищем секцию в API
-        tariffs_http_client_response = tariffs_http_client_1c
+        client = wrHttpClient()
+        tariffs_http_client_response = client.tariff_1c()
         assert tariffs_http_client_response.status_code == 200
         tariffs_data = tariffs_http_client_response.json()
         api_section = find_section_by_name(tariffs_data, expected_section_name)
