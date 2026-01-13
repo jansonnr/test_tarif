@@ -8,10 +8,11 @@ from test_logic.tariff_json import get_all_sections
 def generate_section_files_for_env(env_name: str):
 
     # Получаем URL для окружения
-    base_url = Config.get_base_url(env_name)
+    config = Config()
+    base_url = config.get_base_url(env_name)
 
     # Создаем HTTP клиент и получаем данные
-    http_client = wrHttpClient(base_url)
+    http_client = wrHttpClient(env_name) 
     response = http_client.tariff_1c()
     response.raise_for_status()
     api_data = response.json()
@@ -55,11 +56,12 @@ def generate_section_files_for_both_envs():
     """Генерирует файлы секций для обоих окружений (dev и prod)"""
     print("🚀 Запуск генерации файлов секций для всех окружений...")
 
+    config = Config()
     total_sections = 0
     for env_name in ["dev", "prod"]:
         print(f"\n{'=' * 50}")
         print(f"🔄 Обработка окружения: {env_name}")
-        print(f"📡 URL: {Config.get_base_url(env_name)}")
+        print(f"📡 URL: {config.get_base_url(env_name)}")
         print(f"📁 Директория: test_data/snapshots/{env_name}")
         print(f"{'=' * 50}")
 

@@ -3,10 +3,10 @@ from test_logic.tariff_json import find_section_by_name
 from config import config
 from app_driver.wr_http_client import wrHttpClient
 from test_data.selection_mapping_1c import SECTION_MAPPINGS_1c
-from helper_save_difference import save_comparison_files
+from test_logic.helper_save_difference import save_comparison_files
+from test_logic.normalize_data import normalize_json_data_simple
 
-
-def test_section_comparison_with_debug():
+def test_section_comparison_with_debug_1c():
     """Сравнение секций с сохранением JSON для отладки при несовпадении"""
     env = config.ENV
     mapping = SECTION_MAPPINGS_1c.get(env, {})
@@ -44,18 +44,20 @@ def test_section_comparison_with_debug():
             continue
 
         # Сравниваем
-        if api_section == file_data:
-            tariffs_count = len(api_section.get('tariffs', []))
+        normalized_api = normalize_json_data_simple(api_section)
+        normalized_file = normalize_json_data_simple(file_data)
+
+        if normalized_api == normalized_file:
+            tariffs_count = len(normalized_api.get('tariffs', []))
             print(f"✅ {filename}: СОВПАДАЕТ ({tariffs_count} тарифов)")
         else:
-            file_tariffs = len(file_data.get('tariffs', []))
-            api_tariffs = len(api_section.get('tariffs', []))
+            file_tariffs = len(normalized_file.get('tariffs', []))
+            api_tariffs = len(normalized_api.get('tariffs', []))
             print(f"❌ {filename}: НЕ СОВПАДАЕТ С '{expected_section_name}'")
             print(f"   Файл: {file_tariffs} тарифов, API: {api_tariffs} тарифов")
 
             # Сохраняем JSON для ручного сравнения
-            api_file, file_file = save_comparison_files(api_section, file_data, expected_section_name, env)
-            debug_info.append((expected_section_name, api_file, file_file))
+            api_file, file_file = save_comparison_files(normalized_api, normalized_file, expected_section_name, env)
 
             print(f"   💾 Сохранены файлы для сравнения:")
             print(f"      API:   {api_file}")

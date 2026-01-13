@@ -17,7 +17,7 @@ SECTION_MAPPINGS_1c = {
     },
     "prod": {
         "section_Базис.json": "Базис для сотрудников",
-        "section_Базис_для_ФЛфл.json": "Базис для ФЛ",
+        "section_Базис_для_ФЛ.json": "Базис для ФЛ",
         "section_ЕГАИС.json": "ЕГАИС",
         "section_КЭП_УЦ_ФНС.json": "КЭП УЦ ФНС",
         "section_Перевыпуск.json": "Перевыпуск",
