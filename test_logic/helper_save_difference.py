@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 
-def save_comparison_files(api_file, file_file, section_name, env):
+def save_comparison_files(normalized_api, normalized_file, section_name, env):
     """Сохраняет JSON секций для ручного сравнения при несовпадении"""
     debug_dir = Path("debug_comparison") / env
     debug_dir.mkdir(parents=True, exist_ok=True)

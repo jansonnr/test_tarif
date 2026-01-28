@@ -58,7 +58,6 @@ def test_section_comparison_with_debug_1c():
 
             # Сохраняем JSON для ручного сравнения
             api_file, file_file = save_comparison_files(normalized_api, normalized_file, expected_section_name, env)
-
             print(f"   💾 Сохранены файлы для сравнения:")
             print(f"      API:   {api_file}")
             print(f"      Файл: {file_file}")
